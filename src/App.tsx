@@ -19,7 +19,7 @@ function App() {
           sx={{ paddingTop: "24px" }}
           className="no-print print-button"
         >
-          ระบบออกข้อสอบอัตโนมัติ
+          OpenAI Quiz Generator
         </Typography>
         <QuestionForm />
       </div>
