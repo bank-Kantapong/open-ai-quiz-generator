@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import QuestionForm from "./QuestionForm";
+import Typography from "@mui/material/Typography";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Poppins, Arial, sans-serif",
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Typography
+          variant="h4"
+          gutterBottom
+          sx={{ paddingTop: "24px" }}
+          className="no-print print-button"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          ระบบออกข้อสอบอัตโนมัติ
+        </Typography>
+        <QuestionForm />
+      </div>
+    </ThemeProvider>
   );
 }
 
